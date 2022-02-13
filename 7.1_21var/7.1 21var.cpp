@@ -14,7 +14,7 @@ int task(int n, int a[])
 	}
 	return k;
 }
-int task(int n, string s1)//  lal lal lal
+int task(int n, string s1)
 {
 	int c = s1.size();
 	int k = 0;
@@ -42,10 +42,10 @@ int task(int n, string s1)//  lal lal lal
 }
 int main()
 {
-	string s1 = "lal lal lal";
+	string s1 = "lala lal lal";
 	s1 = s1 + " ";
 	int a[] = { -10, -20, -30, 50, 60 };
 	cout << task(s1.size(), s1) << endl;
-	cout << task(6, a) << endl;
+	cout << task(5, a) << endl;
 	return 0;
 }
