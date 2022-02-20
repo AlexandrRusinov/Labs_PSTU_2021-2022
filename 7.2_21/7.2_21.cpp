@@ -16,16 +16,13 @@ float angles(int n, ...)
         a[0] = va_arg(angles, float);
         int* aa;
         aa = &a[0];
-        a[1] = *(aa++);
-        for (int j = 0; j < 3; j++)
-        {
-            b[0] = va_arg(angles, float);
-            int *bb;
-            bb = &b[0];
-            b[1] = *(bb++);
-            cosa = ((a[0] * b[0]) + (a[1] * b[1])) / (pow((pow(a[0], 2) + pow(a[1], 2)), 0.5) * pow((pow(b[0], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
-            ang = acos(cosa) / M_PI * 180;
-        }
+        a[1] = *(aa + 2);
+        b[0] = va_arg(angles, float);
+        int *bb;
+        bb = &b[0];
+        b[1] = *(bb+2);
+        cosa = ((a[0] * b[0]) + (a[1] * b[1])) / (pow((pow(a[0], 2) + pow(a[1], 2)), 0.5) * pow((pow(b[0], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
+        ang = acos(cosa) / M_PI * 180
     }
     va_end(angles);
     return cosa;
