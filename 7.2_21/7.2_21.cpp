@@ -32,8 +32,6 @@ float angles(int n, ...)
 }
 int main()
 {
-    float cosa;
-    int* arr = new int[2];
     float a[2] = { 4, 0}; // векторы
     float b[2] = { 2, -2};
     float c[2] = { 4, 0 };
