@@ -16,10 +16,9 @@ int task(int n, int a[])
 }
 int task(int n, string s1)
 {
-	int c = s1.size();
 	int k = 0;
 	int d = 0;
-	for (int i = 0; i < c; i++)
+	for (int i = 0; i < n; i++)
 	{
 		if (s1[i]!=' ')
 		{
@@ -30,6 +29,7 @@ int task(int n, string s1)
 			if (s1[d-1] == s1[i - d])
 			{
 				k += 1;
+				d = 0;
 			}
 			else
 			{
