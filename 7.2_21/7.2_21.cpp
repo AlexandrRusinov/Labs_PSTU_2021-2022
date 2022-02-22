@@ -6,26 +6,18 @@ using namespace std;
 
 float angles(int n, ...)
 {
-    int* a = new int[2];
-    int* b = new int[2];
     float cosa, ang;
     va_list angles;  
     va_start(angles, n);
     for (int i = 0; i < n; i++)
     {
-        a[0] = va_arg(angles, float);
-        int* aa;
-        aa = &a[0];
-        a[1] = *(aa++);
-        b[0] = va_arg(angles, float);
-        int *bb;
-        bb = &b[0];
-        b[1] = *(bb++);
+        int a[] = va_arg(angles, int);
+        int b[] = va_arg(angels, int);
         cosa = ((a[0] * b[0]) + (a[1] * b[1])) / (pow((pow(a[0], 2) + pow(a[1], 2)), 0.5) * pow((pow(b[0], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
         ang = acos(cosa) / M_PI * 180
     }
     va_end(angles);
-    return cosa;
+    return ang;
 }
 int main()
 {
