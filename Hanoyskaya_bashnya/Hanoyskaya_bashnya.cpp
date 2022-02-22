@@ -18,7 +18,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     int n;
-    cout << "Введите количество стержней: ";
+    cout << "Введите количество дисков: ";
     cin >> n;
     Hanoy(n, 1, 3, 2);
     return 0;
