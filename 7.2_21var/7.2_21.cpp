@@ -1,28 +1,33 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
-#define M_PI 3.14
 #include <stdarg.h>  
 using namespace std;
 
-float angles(int n, ...)
+int GetAngles(int n, ...)
 {
     float cosa, ang;
-    va_list angles;  
-    va_start(angles, n);
-    for (int i = 0; i < n; i++)
+    const float pi = 3.14;
+    va_list param;
+    va_start(param , n);
+    for (int i = 0; i < n - 1; i++)
     {
-        int a[] = va_arg(angles, int);
-        int b[] = va_arg(angels, int);
-        cosa = ((a[0] * b[0]) + (a[1] * b[1])) / (pow((pow(a[0], 2) + pow(a[1], 2)), 0.5) * pow((pow(b[0], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
-        ang = acos(cosa) / M_PI * 180
+        float* a = new float[2];
+        float* b = new float[2];
+        a[0] = va_arg(param, float);
+        b[0] = va_arg(param, float);
+        cosa = ((a[0] * a[1]) + (b[0] * b[1])) / (pow((pow(a[0], 2) + pow(b[0], 2)), 0.5) * pow((pow(a[1], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
+        ang = acos(cosa) / pi * 180;
+        cout << ang << endl;
+        delete[]a;
+        delete[]b;
     }
-    va_end(angles);
-    return ang;
+    va_end(param);
+    return 0;
 }
 int main()
 {
-    float a[2] = { 4, 0}; // векторы
-    float b[2] = { 2, -2};
+    float a[2] = { 4, 0 }; // векторы
+    float b[2] = { 2, -2 };
     float c[2] = { 4, 0 };
     float d[2] = { 2, -2 };
     float e[2] = { 4, 0 };
@@ -32,9 +37,9 @@ int main()
     float l[2] = { 4, 0 };
     float j[2] = { 2, -2 };
     float k[2] = { 4, 0 };
-    cout << angles(3, a, b, c);
-    cout << angles(9, a, b, c, d, e, f, g, h, l);
-    cout << angles(11, a, b, c, d, e, f, g, h, l, j, k);
+    cout << GetAngles(3, a, b, c) << endl;
+    //cout << GetAngles(9, a, b, c, d, e, f, g, h, l) << endl;
+    //cout << GetAngles(11, a, b, c, d, e, f, g, h, l, j, k) << endl;
 
     return 0;
 }
