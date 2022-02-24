@@ -12,13 +12,17 @@ int GetAngles(int n, ...)
     for (int i = 0; i < n - 1; i++)
     {
         float* a = new float[2];
+        if (i == 0)
+        {
+            a[0] = va_arg(param, float);
+        }
         float* b = new float[2];
-        a[0] = va_arg(param, float);
         b[0] = va_arg(param, float);
         cosa = ((a[0] * a[1]) + (b[0] * b[1])) / (pow((pow(a[0], 2) + pow(b[0], 2)), 0.5) * pow((pow(a[1], 2) + pow(b[1], 2)), 0.5)); //вычисляем угол между векторами
         ang = acos(cosa) / pi * 180;
         cout << ang << endl;
         delete[]a;
+        a = b;
         delete[]b;
     }
     va_end(param);
@@ -37,9 +41,9 @@ int main()
     float l[2] = { 4, 0 };
     float j[2] = { 2, -2 };
     float k[2] = { 4, 0 };
-    cout << GetAngles(3, a, b, c) << endl;
-    //cout << GetAngles(9, a, b, c, d, e, f, g, h, l) << endl;
-    //cout << GetAngles(11, a, b, c, d, e, f, g, h, l, j, k) << endl;
+    cout << GetAngles(3, a, b, c) << endl << endl;
+    cout << GetAngles(9, a, b, c, d, e, f, g, h, l) << endl << endl;
+    cout << GetAngles(11, a, b, c, d, e, f, g, h, l, j, k) << endl << endl;
 
     return 0;
 }
