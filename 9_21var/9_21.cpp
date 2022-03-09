@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>   
 #include <fstream>
 #include <string>
 using namespace std;
@@ -7,8 +7,8 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	ifstream fin; // исходный файл
 	ofstream fout; // принимающий файл
-	fin.open("F1.txt"); // тут уже нужно создать самому txt файл, не как в ofstream
-	fout.open("F2.txt"); // если оставить только название файла, то будет тереть и записывать по новой каждый раз ,ofstream::app приписывает
+	fin.open("F1.txt"); 
+	fout.open("F2.txt"); 
 	if (!fout.is_open()) { cout << "Ошибка открытия файла 2" << endl; }
 	else { cout << "Файл 2 открыт!" << endl; }
 	if (!fin.is_open()) { cout << "Ошибка открытия файла 1" << endl; } // возвращает булеву переменную 
