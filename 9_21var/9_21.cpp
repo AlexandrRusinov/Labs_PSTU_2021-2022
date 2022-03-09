@@ -1,4 +1,8 @@
-#include <iostream>   
+		              /* 1) Скопировать из файла F1 в файл F2 все строки, в которых
+				     есть слова, совпадающие с первым словом.
+				 2) Определить количество согласных букв в последней строке
+				     файла F2.      */
+#include <iostream>
 #include <fstream>
 #include <string>
 using namespace std;
