@@ -36,7 +36,7 @@ Node* list(int n)    // инициализируем список(лист) - э
 void print_list(Node* first)
 {
 	Node* p = first;
-	while (p != nullptr)
+	while (p != 0)
 	{
 		cout << p->data << "\t";   // \t - tab-уляция 4 пробела
 		p = p->ptr;
@@ -51,7 +51,7 @@ Node* add_element(Node* first, int n, char b)
 	cin >> New->data;
 	for (int i = 0; i < n && p != 0; i++)
 	{
-		if (p != nullptr && p->data == b)
+		if (p != 0 && p->data == b)
 		{
 			New->ptr = p->ptr;
 			p->ptr = New;
