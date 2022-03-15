@@ -1,75 +1,81 @@
 ﻿/*
 			21 вариант.
 			Тип информационного поля *char.
-			Добавить в список элемент после элемента с заданным информационным полем.
+			Добавить в список элемент после элемента с заданным информационным полем.         списки - просто куски память, которые ссылаются на другие куски памяти   данные + указатель на след. кусок (пример: плитки)
+																							  в двунаправленном просто 2 указателя - на след. и пред в одном куске
 */
 #include <iostream>
 using namespace std;
 
-struct Node  
+struct Node
 {
 	char data;
-	Node* ptr = nullptr;  // pointer to next node(узел)
+	Node* ptr_next = nullptr;  // pointer to next node(узел)
 };
 
-Node* list(int n)    // инициализируем список(лист) - экземляр типа данных
+struct List
 {
-	Node* first = new Node;     // выделяем память под первый узел
-	Node* p, * r;				// указатели под текущий и следующий узел
-	cout << "\n>>";
-	cin >> first->data;         // вводим первый char в data в СТРУКТУРУ первого узла (struct Node)	, присвоит указателю first адрес введенного chara							 			         | -> оператор доступа к членам через указатель, указывает на структуру |
-	first->ptr = 0;			    // присваиваем полю узла ptr данные (0 - nullptr) след.указателю (по сути мы еще на этом же первом узле) // !!узел содержит указатель на следующий элемент!!
-	p = first;					// указатель на первый узел 
-	for (int i = 0; i < n - 1; i++)
-	{
-		r = new Node; // создаем следующий узел
-		cout << "\n>>";
-		cin >> r->data;
-		r->ptr = 0;
-		p->ptr = r;
-		p = r;
+	Node* headnode = nullptr;
+	Node* curnode = nullptr;
+};
 
+void pushBack(List& list, const int& data) // функция добавления элемента в конец массива
+{
+	Node* newnode = new Node;  // создаем-выделяем память под первый узел
+	newnode->data = data;	   // присваиваем значение узлу
+	if (list.headnode == nullptr)  //если список пуст (адрес сразу nullptr)
+	{
+		list.headnode = newnode;  // новый узел становится главным узлом
 	}
-	return first;
-}
-
-void print_list(Node* first)
-{
-	Node* p = first;
-	while (p != 0)
+	else
 	{
-		cout << p->data << "\t";   // \t - tab-уляция 4 пробела
-		p = p->ptr;
+		Node* curnode = list.headnode;  // берем в качестве текущего узла начальный
+		while (curnode->ptr_next != nullptr) // пока не найдем последний узел в списке
+		{
+			curnode = curnode->ptr_next; // переходим к следующему узлу // вытягиваем каждый раз адрес из следующего элемента оператором -> (получаем доступ к элементу через указатель)
+		}
+		curnode->ptr_next = newnode; // ссылаем последний узел списка на новый
 	}
 }
 
-Node* add_element(Node* first, int n, char b)
+Node* add_element(Node* curnode, int n, char b)
 {
-	Node* p = first;
+	Node* p = curnode;
 	Node* New = new Node;
 	cout << "Введите новый элемент: ";
-	cin >> New->data;
+	cin >> New->data;  // присвоили данные новому элементу и получили доступ по указателю
 	for (int i = 0; i < n && p != 0; i++)
 	{
 		if (p != 0 && p->data == b)
 		{
-			New->ptr = p->ptr;
-			p->ptr = New;
+			New->ptr_next = p->ptr_next;
+			p->ptr_next = New;
 		}
-		p = p->ptr;
+		p = p->ptr_next;
 	}
-	return first;
-}
+	return curnode;
+} 
 
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	char b;
-	cout << "Введите символ, после которого будет добавлен новый элемент: ";
+	List list; // инициализируем список
+	const int n = 5;
+	char dd, b;
+	cout << "Заполните список символами" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> dd;
+		pushBack(list, dd);
+	}
+	cout << "Введите символ, после которого нужно вставить новый: ";
 	cin >> b;
-	int n = 5;
-	Node* first = list(n);
-	add_element(first, n, b);
-	print_list(first);
+	Node* curnode = list.headnode; // указатель на текущий узел
+	add_element(curnode, n, b);
+	while (curnode != nullptr)
+	{
+		cout << curnode->data << ' '; // выводим данные текущего узла
+		curnode = curnode->ptr_next; // переходим к следующему узлу
+	}
 	return 0;
 }
