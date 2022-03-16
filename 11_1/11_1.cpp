@@ -53,7 +53,7 @@ Node* add_element(Node* curnode, int n, char b)
 		}
 		p = p->ptr_next;
 	}
-	return curnode;
+	return curnode; // возвращаем получившийся список
 } 
 
 int main()
