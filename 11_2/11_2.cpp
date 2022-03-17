@@ -36,24 +36,6 @@ void pushBack(List& list, const int& data) // функция добавлени�
 	}
 }
 
-/*Node* del_element(Node* first, int n)
-{
-Node* p = first;
-for (int i = 0; i < n && p != nullptr; i++)
-{
-if ((p->data)%2 == 0)
-{
-Node* remove = p;
-p=
-
-delete remove;
-}
-p = p->ptr_next;
-// переходим к следующему элементу
-}
-return first; // возвращаем получившийся список
-} */
-
 void change(List& list)
 {
 	
