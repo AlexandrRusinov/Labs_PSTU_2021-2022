@@ -12,7 +12,7 @@ template <typename T>
 struct Queue
 {
 	int size = 0; // размер
-	Node<T>* head = nullptr; // указатель на голову - 1 элемент
+	Node<T>* head = nullptr; // указатель на голову 
 	Node<T>* tail = nullptr; // указатель на хвост
 };
 
