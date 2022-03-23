@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿/* 21 вариант. Тип информационного поля int. Удалить из очереди все элементы с четными информационными полями. */
+#include <iostream>
 using namespace std;
 template <typename T> // шаблон
 struct Node
