@@ -1,4 +1,4 @@
-﻿/*
+/*
 			21 вариант.
 			Тип информационного поля int.
 			Удалить из списка все элементы с четными информационными полями.			      списки - просто куски память, которые ссылаются на другие куски памяти   данные + указатель на след. кусок (пример: плитки)
@@ -40,15 +40,20 @@ void change(List& list)
 {
 	
 	Node* currentnode = list.headnode;
-	Node* prednode = list.headnode;
+	Node* tailnode = list.tailnode;
 	while (currentnode != nullptr)
 	{
+		
 		if (currentnode->data % 2 == 0)
 		{
-			prednode->ptr_next = currentnode->ptr_next;
-			prednode = currentnode->ptr_next;
+			Node* remove = currentnode;
+			delete remove;
+			if (remove = tailnode)
+			{
+				tailnode = nullptr;
+			}
 		}
-		currentnode = currentnode->ptr_next;
+		currentnode = currentnod->ptr_next;
 	}	
 }
 int main()
@@ -63,9 +68,8 @@ int main()
 		cin >> dd;
 		pushBack(list, dd);
 	}
-	Node* first = list.headnode; // указатель на текущий узел
-	//del_element(first, n);
 	change(list);
+	Node* first = list.headnode;
 	while (first != nullptr)
 	{
 		cout<< first->data << ' '; // выводим данные текущего узла
