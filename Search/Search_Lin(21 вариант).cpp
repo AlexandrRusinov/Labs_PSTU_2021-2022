@@ -59,4 +59,3 @@ int main()
     LineSearch(arr, size, key);
     return 0;
 }
-
