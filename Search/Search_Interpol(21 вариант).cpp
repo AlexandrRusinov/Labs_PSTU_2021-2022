@@ -72,7 +72,7 @@ int main()
     {
         if(i!=indexkey)
         {
-            arr1[i] = arr[i];  // a b c d e 
+            arr1[i] = arr[i];  
             i++;
         }
         else
