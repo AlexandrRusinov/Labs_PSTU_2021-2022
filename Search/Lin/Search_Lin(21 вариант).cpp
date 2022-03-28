@@ -56,6 +56,6 @@ int main()
         cout << "Введите символ: ";
         cin >> arr[i];
     }
-    LineSearch(arr, size, key);
+    LinSearch(arr, size, key);
     return 0;
 }
