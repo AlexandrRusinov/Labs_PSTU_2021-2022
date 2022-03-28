@@ -1,7 +1,7 @@
 #include <iostream>  /* 21 вариант. Элементы массива - символы типа char, среди них есть миниму один символ "[", найти его и удалить */
 using namespace std;
 //счетчик ключей = разница, которую будем вычитать из размера оригинального массива 
-void LineSearch(char arr[], int size, int key)
+void LinSearch(char arr[], int size, int key)
 {
     int k = 0; // счетчик ключей - ненужных символов
     int i = 0;
