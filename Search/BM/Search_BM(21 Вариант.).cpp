@@ -1,4 +1,5 @@
 ﻿#include <iostream>                   /* 21 вариант. Найти и удалить первое вхождение подстроки strl */
+#include <string> 
 using namespace std;
 
 int BMsearch(string str, string substr)
