@@ -37,7 +37,7 @@ public:
 	}
 	int GetId()
 	{
-		cout << "ФИО ученика: " << id << endl;
+		cout << "Номер квитанции: " << id << endl;
 		return id;
 	}
 	void SetId(int ValueId)
