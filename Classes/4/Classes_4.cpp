@@ -1,4 +1,4 @@
-#include <iostream> // 12 вариант.
+﻿#include <iostream> // 12 вариант.
 #include <string>
 using namespace std;
 
@@ -80,7 +80,7 @@ class Student : public Person // производный класс
 protected:
     int year;
 public:
-    Student(void) : Person() { year = 0; } // конструктор без параметром
+    Student(void) : Person() { year = 0; }
 
     Student(string pName, int pAge, int sYear) : Person(pName, pAge)
     {
