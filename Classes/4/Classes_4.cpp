@@ -28,11 +28,11 @@ public:
 
     ~Person(void) { }
 public:
-    // Геттеры (возвращают значение полей класса)
+    // Геттеры 
     string getNme() { return name; }
     int getAge() { return age; }
 
-    // Сеттеры (устанавливают зачения полей класса)
+    // Сеттеры 
     void setName(string newName) { name = newName; }
     void setAge(int newAge) { age = newAge; }
 
