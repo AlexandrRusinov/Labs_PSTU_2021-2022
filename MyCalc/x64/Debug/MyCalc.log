@@ -1,0 +1,15 @@
+﻿  MyForm.cpp
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(468,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(476,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(483,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(490,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(497,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(504,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(511,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(518,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(525,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(532,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(539,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\rusin\source\repos\MyCalc\MyForm.h(546,14): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  MyCalc.vcxproj -> C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.exe
