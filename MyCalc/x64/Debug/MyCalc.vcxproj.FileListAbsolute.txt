@@ -1,5 +1,0 @@
-C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.vcxproj.AssemblyReference.cache
-C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.vcxproj.SuggestedBindingRedirects.cache
-C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.MyForm.resources
-C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.vcxproj.GenerateResource.cache
-C:\Users\rusin\source\repos\MyCalc\x64\Debug\MyCalc.exe
