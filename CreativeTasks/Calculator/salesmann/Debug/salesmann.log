@@ -1,0 +1,25 @@
+﻿  salesmann.cpp
+C:\Users\rusin\source\repos\salesmann\salesmann.h(425,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(489,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(582,8): warning C4101: targetVertex: неиспользованная локальная переменная
+C:\Users\rusin\source\repos\salesmann\salesmann.h(583,8): warning C4101: edgeWeight: неиспользованная локальная переменная
+C:\Users\rusin\source\repos\salesmann\salesmann.h(350,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(346): message : во время компиляции функции-члена класс шаблон "void Graph<int>::Print(void)"
+C:\Users\rusin\source\repos\salesmann\salesmann.h(596): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Graph<int>::Print(void)"
+C:\Users\rusin\source\repos\salesmann\salesmann.h(50): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Graph<int>"
+C:\Users\rusin\source\repos\salesmann\salesmann.h(354,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(356,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(269,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\rusin\source\repos\salesmann\salesmann.h(268): message : во время компиляции функции-члена класс шаблон "int Graph<int>::GetVertPos(const T &)"
+          with
+          [
+              T=int
+          ]
+C:\Users\rusin\source\repos\salesmann\salesmann.h(324): message : выполняется компиляция ссылки на экземпляр шаблон функции "int Graph<int>::GetVertPos(const T &)"
+          with
+          [
+              T=int
+          ]
+C:\Users\rusin\source\repos\salesmann\salesmann.h(279): message : во время компиляции функции-члена класс шаблон "Graph<int>::Graph(void)"
+C:\Users\rusin\source\repos\salesmann\salesmann.h(50): message : выполняется компиляция ссылки на экземпляр шаблон функции "Graph<int>::Graph(void)"
+  salesmann.vcxproj -> C:\Users\rusin\source\repos\salesmann\Debug\salesmann.exe
