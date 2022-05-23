@@ -483,7 +483,7 @@ void reshape(int w, int h) {
 // отрисовка текста меню 
 //
 void drawMenuText(string text, int x1, int y1) {
-	GLvoid* font = GLUT_BITMAP_HELVETICA_18;
+	GLvoid* font = GLUT_BITMAP_9_BY_15;
 	string s = text;
 	glRasterPos2i(x1 + 5, y1 - 20);
 	for (int j = 0; j < s.length(); j++)
